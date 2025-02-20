@@ -1,30 +1,24 @@
-import { useState } from 'react'
-import './App.css'
+
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
+import MainLayout from "./layouts/MainLayout";
+import HomePage from "./pages/HomePage"
+import AddProjects from "./pages/AddProjects"
+import ProjectPage from "./pages/ProjectPage"
 
-import { MainLayout } from './layout/MainLayout'
-import { HomePage } from './pages/HomePage'
-import { Blog } from './pages/BlogContent'
-import { Property } from './pages/PropertyInfo'
+const App = () => {
 
-function App() {
 
-  const route = createBrowserRouter(
-    createRoutesFromElements(
-      <Route path='/' element={<MainLayout />}>
-        <Route index element={<HomePage />} />
-        <Route path='/blog-content' element={<Blog/>} />
-        <Route path='/property-info' element={<Property />} />
-        <Route path='/admin' element={''} />
-        <Route path='/login' element={''} />
-      </Route>
-    )
-  )
-  
+  const router = createBrowserRouter(createRoutesFromElements(
+    <Route path="/" element={<MainLayout />}>
+      <Route index element={<HomePage />} />
+      <Route path="/add-notes" element={<AddProjects />} />
+      <Route path="/project-detail" element={<ProjectPage />} />
+    </Route>
+  ))
 
-  return (
-    <RouterProvider router={route} />
-  )
-}
 
-export default App
+
+  return <RouterProvider router={router} />
+};
+
+export default App;
