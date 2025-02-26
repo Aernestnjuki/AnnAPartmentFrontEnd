@@ -10,7 +10,7 @@ const ProjectCard = ({color}) => {
     <div className="col-md-4 col-sm-12 single-project-item all-category">
                 <div className="card">
                     <Link to="/project-detail">
-                        <img className="card-img-top img-responsive" style={{height: "150px"}} src={image} alt="image" />
+                        <img className="card-img-top" style={{height: "240px"}}  src={image} alt="image" />
                     </Link>
                     <div className="card-body">
                         <span className="side-stick" style={{backgroundColor: color}}></span>

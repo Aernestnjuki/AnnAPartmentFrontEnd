@@ -8,7 +8,7 @@ const NavBar = () => {
     <nav className="navbar bg-body-tertiary py-50" style={{ padding: "20px" }}>
       <div className="container d-flex justify-content-around">
         <Link className="navbar-brand" to="/">
-          <h4 style={{ fontWeight: "bold" }}>Mueni Homes</h4>
+          <h4 style={{ fontWeight: "bold" }}>Makena Homes</h4>
         </Link>
         <div className="d-flex">
           <div
